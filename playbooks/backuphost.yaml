@@ -1,0 +1,10 @@
+---
+- name: Intro to Ansible Playbooks
+  hosts: all
+
+  tasks:
+    - name: Copy file hosts with permissions
+      ansible.builtin.copy:
+        src: ./hosts
+        dest: /tmp/hosts_backup
+        mode: "0644"
